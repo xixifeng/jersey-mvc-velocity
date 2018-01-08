@@ -2,5 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: jersey-mvc-velocity
 Bundle-SymbolicName: jersey-mvc-velocity
-Bundle-Version: 1.0
+Bundle-Version: 1.1
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.fastquery.jersey.mvc,
+ org.fastquery.jersey.mvc.filter

@@ -1,3 +1,19 @@
+## Maven
+
+```xml
+<dependency>
+    <groupId>org.fastquery</groupId>
+    <artifactId>jersey-mvc-velocity</artifactId>
+    <version>1.1</version>
+</dependency>
+```
+
+## Gradle/Grails
+
+```xml
+compile 'org.fastquery:jersey-mvc-velocity:1.1'
+```
+
 ## Jersey Velocity MVC Templates
 
 ```java
