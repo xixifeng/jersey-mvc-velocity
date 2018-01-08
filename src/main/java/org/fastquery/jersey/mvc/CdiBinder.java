@@ -46,10 +46,11 @@ public class CdiBinder extends AbstractBinder {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CdiBinder.class);
 
+	private Map<String, Properties> props = new HashMap<>();
+
 	@Override
 	protected void configure() {
 		// 将classpath 目录下的properties文件交给CDI容器
-		Map<String, Properties> props = new HashMap<>();
 		URL url = this.getClass().getResource("/");
 		File file = new File(url.getFile());
 
@@ -73,6 +74,13 @@ public class CdiBinder extends AbstractBinder {
 		// 将AuthorizationFilter交给CDI容器
 		Properties p = props.get("authorization");
 		bind(new AuthorizationFilter(p)).to(AuthorizationFilter.class);
+	}
+
+	public Properties getProperties(String key) {
+		return props.get(key);
+	}
+
+	public void clearProps() {
 		props.clear();
 	}
 }
